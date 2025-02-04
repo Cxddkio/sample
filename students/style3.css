@@ -1,0 +1,64 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+.header {
+    text-align: center; /* Center align header content */
+    padding: 20px;
+    background-color: #f1f1f1; /* Light gray background for header */
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Center the entire grid container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers columns horizontally */
+    gap: 10px; /* Adds spacing between images */
+    padding: 20px;
+}
+
+/* Individual column styling */
+.column {
+    flex: 25%; /* Each column takes up 25% of the row width */
+    max-width: 25%; /* Ensures columns don't exceed 25% width */
+    padding: 0 10px; /* Adds horizontal padding */
+}
+
+.column img {
+    width: 100%; /* Ensures images fill the column width */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes any extra space below the image */
+    border-radius: 8px; /* Optional: Adds rounded corners to images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+/* Responsive layout - makes two columns instead of four on medium screens */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes one column on small screens */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
